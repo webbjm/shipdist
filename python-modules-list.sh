@@ -14,6 +14,7 @@ env:
     mock==2.0.0
     notebook==5.7.8
     scons==4.1.0
+    rtree==1.3.0
   PIP36_REQUIREMENTS: |
     PyYAML==6.0.1
     psutil==5.8.0
@@ -112,6 +113,7 @@ env:
     dryable==1.0.5
     responses==0.10.6
     pandas==1.5.3
+    rtree==1.3.0
   PIP311_REQUIREMENTS: |
     PyYAML==6.0.1
     psutil==5.9.5
@@ -127,6 +129,7 @@ env:
     dryable==1.0.5
     responses==0.10.6
     pandas==1.5.3
+    rtree==1.3.0
 build_requires:
   - alibuild-recipe-tools
 ---

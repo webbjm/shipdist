@@ -1,8 +1,10 @@
 package: GenFit
 version: main
+#version: 12c8e05d41c6bd4d54a638da2248816079edba27
 source: https://github.com/olantwin/GenFit
 requires:
   - ROOT
+#  - RAVE
   - googletest # should be build dep?
   - boost
 build-requires:
@@ -25,6 +27,7 @@ cmake $SOURCEDIR                                                                
       -DCMAKE_INSTALL_LIBDIR=lib                                                            \
       -DCMAKE_INSTALL_PREFIX=$INSTALLROOT \
       -DCMAKE_POLICY_DEFAULT_CMP0074=NEW \
+#      -DRave_DIR="${RAVEPATH}" \
       -DROOT_DIR="${ROOT_ROOT}"
 
 cmake --build . -- -j$JOBS install
@@ -48,7 +51,8 @@ if ![ is-loaded 'BASE/1.0' ] {
  module load BASE/1.0
 }
 
-set PKG_ROOT $::env(BASEDIR)/GenFit/\$version
+#if ![ is-loaded "RAVE/$RAVE_VERSION-$RAVE_REVISION" ] { module load "RAVE/$RAVE_VERSION-$RAVE_REVISION"}
+#set PKG_ROOT $::env(BASEDIR)/GenFit/\$version
 
 # Our environment
 set GENFIT_ROOT \$::env(BASEDIR)/$PKGNAME/\$version
