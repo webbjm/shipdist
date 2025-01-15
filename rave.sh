@@ -1,6 +1,7 @@
 package: RAVE
-version: 759234fdf470c24e4964c3654213d7b4d5f36976
-source: https://github.com/olantwin/rave
+version: main #6330c6b
+source: https://github.com/webbjm/rave
+#source: https://github.com/olantwin/rave
 requires:
   - boost
   - CLHEP

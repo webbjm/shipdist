@@ -1,7 +1,9 @@
 package: CLHEP
-version: "2.2.0.8"
+#version: "2.2.0.8"
+version: "2.4.7.1"
 source: https://gitlab.cern.ch/CLHEP/CLHEP.git
-tag: CLHEP_2_2_0_8
+tag: CLHEP_2_4_7_1
+#tag: CLHEP_2_2_0_8
 build_requires:
   - CMake
   - "Xcode:(osx.*)"
